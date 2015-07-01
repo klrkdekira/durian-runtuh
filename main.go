@@ -130,17 +130,20 @@ func extractData(docNum int) ([]*Tender, error) {
 	soup.Find("table tbody tr:not(:first-child)").Each(func(i int, cols *goquery.Selection) {
 		tender := &Tender{}
 		cols.Find("td:not(:first-child)").Each(func(i int, content *goquery.Selection) {
+			td := content.Text()
+			td = strings.TrimSpace(td)
+			td = strings.Replace(td, "\t", "", -1)
 			switch i {
 			case 0:
-				tender.Title = content.Text()
+				tender.Title = td
 			case 1:
-				tender.Category = content.Text()
+				tender.Category = td
 			case 2:
-				tender.Ministry = content.Text()
+				tender.Ministry = td
 			case 3:
-				tender.Company = content.Text()
+				tender.Company = td
 			case 4:
-				stringVal := strings.Replace(content.Text(), ",", "", -1)
+				stringVal := strings.Replace(td, ",", "", -1)
 				// forgive my cheap hack
 				val, err := strconv.ParseInt(strings.Split(stringVal, ".")[0], 10, 64)
 				if err != nil {
@@ -148,7 +151,7 @@ func extractData(docNum int) ([]*Tender, error) {
 				}
 				tender.Value = val
 			case 5:
-				tender.Reason = content.Text()
+				tender.Reason = td
 			}
 		})
 		tenders = append(tenders, tender)
