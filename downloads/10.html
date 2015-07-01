@@ -1,0 +1,393 @@
+
+<html>
+<head>
+<!--
+<link rel="stylesheet" type="text/css" href="epoch_style.css" />
+-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="css/suprtheme/jquery.ui.supr.css" rel="stylesheet" type="text/css"/>
+
+
+<title>Senarai Perolehan Secara Rundingan Terus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script type="text/javascript" src="epoch_classes.js"></script>
+<script type="text/javascript" src="scripts/bootstrap/bootstrap.js"></script>
+
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr valign="top">
+    <td width="100%">
+		<!-- Temporary Disable -->
+		<!--
+		<form name="form1" method="get" action="/templates/theme427/rttender.php">
+			<table width="100%" border="0" cellspacing="1" cellpadding="2">
+				
+				<tr>
+				  <td colspan="2" valign="top"><font size="2" face="Arial, Helvetica, sans-serif"><strong>Senarai Perolehan Secara Rundingan Terus Terkini</strong></font></td>
+				  <td width="15%" valign="top">&nbsp;</td>
+				  
+				  
+				  <td width="35%" align="right" valign="top"><font size="2"><font face="Arial, Helvetica, sans-serif">
+					<a href="keputusantender_arkib.php">Arkib Perolehan Secara Rundingan Terus Kerajaan</a></font></font>
+				  </td>
+				  
+				</tr>
+				
+				<tr>
+				  <td width="15%" valign="top">&nbsp;</td>
+				  <td width="35%" valign="top">&nbsp;</td>
+				  <td valign="top">&nbsp;</td>
+				  <td valign="top">&nbsp;</td>
+				</tr>
+				
+				
+				<tr>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif">Tajuk Tender:</font></font></td>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif">
+					<input name="cari_tender_title" type="text" id="cari_tender_title" value="" size="30">
+				  </font></font></td>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif">Kategori Perolehan:</font></font></td>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif"> </font><font size="1"><font face="Arial, Helvetica, sans-serif">
+					<select name="cari_tender_cat" id="cari_tender_cat">
+														<option  selected value="">Semua Kategori</option>
+														<option >KERJA</option>
+															  <option >BEKALAN</option>
+															  <option >PERKHIDMATAN BUKAN PERUNDING</option>
+													<option >BEKALAN & PERKHIDMATAN BUKAN PERUNDING</option>
+					</select>
+				  </font></font><font face="Arial, Helvetica, sans-serif"> </font></font></td>
+				</tr>
+				
+				<tr>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif">Kementerian:</font></font></td>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif"> </font><font size="1"><font face="Arial, Helvetica, sans-serif">
+					<select name="cari_min_id" id="cari_min_id">
+													<option  selected value="">Semua Kementerian</option>
+																<option  selected value="">JABATAN PERDANA MENTERI</option>
+																<option  selected value="">KEMENTERIAN BELIA DAN SUKAN</option>
+																<option  selected value="">KEMENTERIAN DALAM NEGERI</option>
+																<option  selected value="">KEMENTERIAN KEMAJUAN LUAR BANDAR DAN WILAYAH</option>
+																<option  selected value="">KEMENTERIAN KERJA RAYA</option>
+																<option  selected value="">KEMENTERIAN KESEJAHTERAAN BANDAR, PERUMAHAN DAN KERAJAAN TEMPATAN</option>
+																<option  selected value="">KEMENTERIAN KESIHATAN</option>
+																<option  selected value="">KEMENTERIAN KEWANGAN</option>
+																<option  selected value="">KEMENTERIAN KOMUNIKASI DAN MULTIMEDIA</option>
+																<option  selected value="">KEMENTERIAN LUAR NEGERI</option>
+																<option  selected value="">KEMENTERIAN PELANCONGAN DAN KEBUDAYAAN MALAYSIA</option>
+																<option  selected value="">KEMENTERIAN PEMBANGUNAN WANITA, KELUARGA DAN MASYARAKAT</option>
+																<option  selected value="">KEMENTERIAN PENDIDIKAN</option>
+																<option  selected value="">KEMENTERIAN PENGAJIAN TINGGI</option>
+																<option  selected value="">KEMENTERIAN PENGANGKUTAN</option>
+																<option  selected value="">KEMENTERIAN PERDAGANGAN ANTARABANGSA DAN INDUSTRI</option>
+																<option  selected value="">KEMENTERIAN PERDAGANGAN DALAM NEGERI, KOPERASI DAN KEPENGGUNAAN</option>
+																<option  selected value="">KEMENTERIAN PERTAHANAN</option>
+																<option  selected value="">KEMENTERIAN PERTANIAN DAN INDUSTRI ASAS TANI</option>
+																<option  selected value="">KEMENTERIAN SAINS, TEKNOLOGI DAN INOVASI</option>
+																<option  selected value="">KEMENTERIAN SUMBER ASLI DAN ALAM SEKITAR</option>
+																<option  selected value="">KEMENTERIAN SUMBER MANUSIA</option>
+																<option  selected value="">KEMENTERIAN TENAGA, TEKNOLOGI HIJAU DAN AIR</option>
+																<option  selected value="">PENTADBIRAN KERAJAAN NEGERI PERLIS</option>
+												</select>
+					</font>
+					</font>
+					
+					<font face="Arial, Helvetica, sans-serif"> </font></font></td>
+				</tr>
+				
+				<tr>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif">Kriteria :</font></font></td>
+				  <td valign="top"><font size="1"><font face="Arial, Helvetica, sans-serif">
+					<input name="cari_tender_criteria" type="text" id="cari_tender_criteria" value="" size="30">
+				  </font></font></td>
+				</tr>
+				<tr>
+				  <td valign="top"><font size="1" face="Arial, Helvetica, sans-serif">Nilai Perolehan:</font></td>
+				  <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					  <tr valign="top">
+						<td width="80%"><font size="1" face="Arial, Helvetica, sans-serif"> RM
+						  <input name="cari_tender_price_start" type="text" id="cari_tender_price_start" value="" size="10">
+						</font>
+						<div class="row-fluid">
+							<label class="form-label span4" for="normal">Nilai Perolehan:</label>
+                            <input class="span8 mask" id="mask-eyeScript" type="text" />
+                        </div>
+						</td>
+					  </tr>
+				  </table></td>
+				  <td valign="top">&nbsp;</td>
+				  <td valign="middle"><font size="1"><font face="Arial, Helvetica, sans-serif">
+					<input name="Submit" type="submit" id="Submit" value="   Cari   ">
+				  </font><font size="1"><font face="Arial, Helvetica, sans-serif"><font size="1"><font face="Arial, Helvetica, sans-serif"><font size="1"><font face="Arial, Helvetica, sans-serif"><font size="2">
+				  <input name="semula" type="button" id="semula" value="   Semula   " onClick="location.href='/templates/theme427/rttender.php'">
+				  </font><font size="1"><font face="Arial, Helvetica, sans-serif"><font size="1">
+				  <font face="Arial, Helvetica, sans-serif"><font size="1"><font face="Arial, Helvetica, sans-serif"><font size="2"> </font></font></font><font size="2"> </font></font></font><font size="2">
+				  <input type="hidden" name="sort" value="">
+				  <input type="hidden" name="by" value="">
+				  </font></font></font></font></font></font></font></font></font><font face="Arial, Helvetica, sans-serif"></font></font></td>
+				</tr>
+			</table>
+		</form>
+		-->
+		
+		<!-- SORTING BY FIELD NAME -->
+		<div align="right">
+			        <!-- Temporary Disable -->
+		
+		<div align="center">
+			<a style="text-transform: uppercase; font-family: Arial; color: #FF0000;"><b>Senarai Perolehan Secara Rundingan Terus </b></a><br/>
+			<a style="color: #FF0000;"><i>Penafian Tuntutan  </a>: Sebarang Maklumat Mengenai Perolehan Secara Rundingan Terus Hendaklah Dirujuk Terus ke Kementerian/Agensi Yang Berkenaan.</i>
+		</div>
+		
+		<font size="2" face="Arial, Helvetica, sans-serif">Sebanyak <strong>150</strong> rekod ditemui</font>
+		</div>
+		
+			<table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#000000">
+				<tr align="center" bgcolor="#CCCCCC">
+				  <td width="2%"><font size="2" face="Arial, Helvetica, sans-serif"><strong>BIL.</strong></font></td>
+					<td width="27%">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>TAJUK PEROLEHAN / PROJEK</strong></font></td>
+							<td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><strong><a href="/templates/theme427/rttender.php?sort=ASC&by=rttender_title">
+																	<img src="images/asc.gif" width="9" height="11" border="0"></a><br>
+								<a href="/templates/theme427/rttender.php?sort=DESC&by=rttender_title">
+								
+																<img src="images/desc.gif" width="9" height="11" border="0"></a></strong></font></td>
+						</tr>
+					</table>            
+					
+					<font size="2" face="Arial, Helvetica, sans-serif">&nbsp;</font>
+					</td>
+				  
+					<td width="8%">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+							<td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>KATEGORI PEROLEHAN</strong></font></td>
+							<td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><strong><a href="/templates/theme427/rttender.php?sort=ASC&by=rttender_cat">
+							  							  <img src="images/asc.gif" width="9" height="11" border="0"></a><br>
+							  <a href="/templates/theme427/rttender.php?sort=DESC&by=rttender_cat">
+							  							<img src="images/desc.gif" width="9" height="11" border="0"></a></strong></font></td>
+							</tr>
+						</table>
+					</td>
+					<td width="16%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>KEMENTERIAN</strong></font></td>
+						<td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><strong><a href="/templates/theme427/rttender.php?sort=ASC&by=rtmin_name">
+														<img src="images/asc.gif" width="9" height="11" border="0"></a><br>
+							<a href="/templates/theme427/rttender.php?sort=DESC&by=rtmin_name">
+														<img src="images/desc.gif" width="9" height="11" border="0"></a></strong></font></td>
+					</tr>
+				</table>            <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;</font></td>
+					<td width="12%">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+							  <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>NAMA
+								SYARIKAT</strong></font></td>
+							  <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><strong><a href="/templates/theme427/rttender.php?sort=ASC&by=rttender_com_name">
+																<img src="images/asc.gif" width="9" height="11" border="0"></a><br>
+								<a href="/templates/theme427/rttender.php?sort=DESC&by=rttender_com_name">
+																<img src="images/desc.gif" width="9" height="11" border="0"></a></strong></font></td>
+							</tr>
+						</table>
+					</td>
+					<td width="8%">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+						  <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>NILAI PEROLEHAN (RM)</strong></font></td>
+						  <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><strong><a href="/templates/theme427/rttender.php?sort=ASC&by=rttender_price">
+														<img src="images/asc.gif" width="9" height="11" border="0"></a><br>
+							<a href="/templates/theme427/rttender.php?sort=DESC&by=rttender_price">
+														<img src="images/desc.gif" width="9" height="11" border="0"></a></strong></font></td>
+						</tr>
+					</table>          </td>
+						<td width="9%">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+								  <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>KRITERIA RUNDINGAN TERUS
+									</strong></font></td>
+								  <td align="right"><font size="2" face="Arial, Helvetica, sans-serif"><strong><a href="/templates/theme427/rttender.php?sort=ASC&by=rttender_criteria">
+																		<img src="images/asc.gif" width="9" height="11" border="0"></a><br>
+									<a href="/templates/theme427/rttender.php?sort=DESC&by=rttender_criteria">
+																		<img src="images/desc.gif" width="9" height="11" border="0"></a></strong></font></td>
+								</tr>
+							</table>
+						</td>
+				</tr>
+								<tr valign="top">
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">91.</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN KELULUSAN MELANTIK INNOVATION ASSOCIATES CONSULTING SDN. BHD. UNTUK PENAMBAHBAIKAN INTEGRATED FINANCIAL & ADMINISTRATIVE MANAGEMENT SYSTEM (IFAMS) BAGI PELAKSANAAN CUKAI BARANG DAN PERKHIDMATAN (GST) SECARA RUNDINGAN TERUS DI KUMPULAN WANG SIMPANAN PEKERJA (KWSP)(TEMPOH: MULAI TARIKH LANTIKAN (13/10/2014)SEHINGGA JUN 2015													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">INNOVATION ASSOCIATES SDN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">143,100.00</font></td>
+							<td align="center" bgcolor="#FFFFFF" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Kepakaran</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">92.</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">
+														PEROLEHAN PERKHIDMATAN PEMBERSIHAN BLOK PENTADBIRAN DAN KUARTERS DI INSTITUT PERAKAUNAN NEGARA, SABAK BERNAM, SELANGOR MULAI DARI TARIKH SURAT SETUJU TERIMA HINGGA 31 DISEMBER 2014													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">BUME JAYA TRADING SDN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">148,750.00</font></td>
+							<td align="center" bgcolor="#FFFFCC" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Keperluan Mendesak</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">93.</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN PEROLEHAN MENAIKTARAF KEKUNCI AKAR (ROOT KEY) PUBLIC KEY INFRASTRUCTURE (PKI) SISTEM PERANCANGAN & KAWALAN BELANJAWAN ELEKTRONIK (ESPKB)UNTUK TEMPOH 23 DISEMBER 2013 HINGGA 31 DISEMBER 2013													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">BEKALAN DAN PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">XYBASE SDN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">156,000.00</font></td>
+							<td align="center" bgcolor="#FFFFFF" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Penyeragaman, Keperluan Mendesak</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">94.</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN PEROLEHAN SEBELAS (11) UNIT MESIN FRANKI DIGITAL BAGI PUSAT KHIDMAT HASIL BARU, LEMBAGA HASIL DALAM NEGERI MALAYSIA  RUNDINGAN TERUS DENGAN SYARIKAT ANYTEKSYS SDN. BHD. (TEMPOH SATU (1) TAHUN)													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">BEKALAN DAN PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">ANYTEKSYS ADN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">165,000.00</font></td>
+							<td align="center" bgcolor="#FFFFCC" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Satu Punca Bekalan/ Perkhidmatan (Pembuat/ Pemegang Frachais), Penyeragaman, Keperluan Mendesak</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">95.</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN KELULUSAN BAGI MELANTIK SYARIKAT MESINIAGA BERHAD BAGI MELAKSANAKAN PENYENGGARAAN APPLICATION SOFTWARE UNTUK SISTEM DATA WAREHOUSE FOR PERFORMANCE REPORTING SECARA  RUNDINGAN TERUS DI KUMPULAN WANG SIMPANAN PEKERJA (KWSP) (TEMPOH 3 TAHUN MULAI 1 JANUARI 2015 HINGGA 31 DISEMBER 2017)													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">MESINIAGA BERHAD</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">169,176.00</font></td>
+							<td align="center" bgcolor="#FFFFFF" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Kepakaran</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">96.</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN KELULUSAN BAGI MELANTIK SYARIKAT KE SDN. BHD. BAGI MELAKSANAKAN PERKHIDMATAN PENAMBAHBAIKAN SISTEM MAKLUMAT SUMBER MANUSIA (SMSM) SECARA RUNDINGAN TERUS OLEH KUMPULAN WANG SIMPANAN PEKERJA (KWSP)- (MULAI TARIKH LANTIKAN HINGGA 31 JANUARI 2015)													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">KE SDN BHD</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">171,175.00</font></td>
+							<td align="center" bgcolor="#FFFFCC" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Penyeragaman, Kepakaran</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">97.</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN PEROLEHAN BAGI PERKHIDMATAN LANJUTAN PENSIJILAN ISMS MS ISO/IEC 27001:2007 DAN PERALIHAN KEPADA ISMS MS ISO/IEC 27001:2013 UNTUK PENGURUSAN KESELAMATAN MAKLUMAT SISTEM E-FILING DI PUSAT DATA LHDNM, CYBERJAYA SECARA RUNDINGAN TERUS DENGAN SCAN ASSOCIATES BERHAD (TEMPOH : 15 BULAN, MULAI 3 SEPTEMBER 2014 - 2 DISEMBER 2015)													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">BEKALAN DAN PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">SCAN ASSOCIATES BERHAD</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">188,000.00</font></td>
+							<td align="center" bgcolor="#FFFFFF" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Keperluan Mendesak, Penyeragaman, Kepakaran</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">98.</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN TAMBAHAN NILAI BAGI PERJANJIAN PERKHIDMATAN PENYENGGARAAN GOVERNMENT FINANCIAL MANAGEMENT ACCOUNTING SYSTEM (GFMAS)													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">TELITI COMPUTERS SDN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">200,000.00</font></td>
+							<td align="center" bgcolor="#FFFFCC" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Penyeragaman</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">99.</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERMOHONAN PELANJUTAN KONTRAK PERKHIDMATAN PELUASAN SISTEM PENGURUSAN ASET KE PERINGKAT PEJABAT PENGARAH NEGERI/ CAWANGAN/ CAWANGAN SIASATAN SELURUH NEGARA LEMBAGA HASIL DALAM NEGERI MALAYSIA DENGAN SYARIKAT KANNTRONICS SDN BHD UNTUK TEMPOH TIGA (3) TAHUN MULAI  1 OKTOBER 2014 HINGGA 30 SEPTEMBER 2017													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">KANNTRONICS SDN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFFF"><font size="1" face="Arial, Helvetica, sans-serif">201,000.00</font></td>
+							<td align="center" bgcolor="#FFFFFF" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Penyeragaman</font></td>
+						</tr>
+										<tr valign="top">
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">100.</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">
+														PERKHIDMATAN PENAMBAHBAIKAN APLIKASI SISTEM PERAKAUNAN HASIL BERELEKTRONIK (ERAS) DI LEMBAGA HASIL DALAM NEGERI MALAYSIA UNTUK TEMPOH 1 TAHUN MULAI 2 MEI 2014 HINGGA 1 MEI 2015													  </font></td>
+						  
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">PERKHIDMATAN BUKAN PERUNDING</font></td>
+							<td bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">KEMENTERIAN KEWANGAN</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">CENTURY SOFTWARE (MALAYSIA) SDN. BHD.</font></td>
+							<td align="center" bgcolor="#FFFFCC"><font size="1" face="Arial, Helvetica, sans-serif">243,000.00</font></td>
+							<td align="center" bgcolor="#FFFFCC" style="text-transform: uppercase;"><font size="1" face="Arial, Helvetica, sans-serif">Penyeragaman, Satu Punca Bekalan/ Perkhidmatan (Pembuat/ Pemegang Frachais)</font></td>
+						</tr>
+				       	
+							</table>    
+					  <br>  
+						
+						  <table border="0" align="center" cellpadding="5" cellspacing="0">
+							<tr align="center" valign="middle">
+							  <td><font size="1" face="Arial, Helvetica, sans-serif">
+					          
+							  <a href="/templates/theme427/rttender.php?sort=&by=&page=1">
+												  <img src="images/arrow_first.gif" width="27" height="20" border="0"><br>
+							  Mula
+					          
+										</a>          
+				          
+				  </font></td>
+				  <td><font size="1" face="Arial, Helvetica, sans-serif">
+						          
+								  <a href="/templates/theme427/rttender.php?sort=&by=&page=9">
+														  <img src="images/arrow_previous.gif" width="11" height="20" border="0"><br>
+								  Sebelum
+						          
+								  </a>          
+										</font></td>
+				<td><font size="3" face="Arial, Helvetica, sans-serif">
+... <a href="/templates/theme427/rttender.php?sort=&by=&page=8">8</a> <a href="/templates/theme427/rttender.php?sort=&by=&page=9">9</a> <strong>10</strong> <a href="/templates/theme427/rttender.php?sort=&by=&page=11">11</a> <a href="/templates/theme427/rttender.php?sort=&by=&page=12">12</a> ...           
+				  </font></td>
+				  <td><font size="1" face="Arial, Helvetica, sans-serif">
+		          
+				  <a href="/templates/theme427/rttender.php?sort=&by=&page=11">
+						  <img src="images/arrow_next.gif" width="11" height="20" border="0"><br>
+				  Selepas
+		          
+				  </a>          
+		                    
+				  </font></td>
+				  <td><font size="1" face="Arial, Helvetica, sans-serif">
+		          
+				  <a href="/templates/theme427/rttender.php?sort=&by=&page=15">
+		          <img src="images/arrow_last.gif" width="27" height="20" border="0"><br>
+          Akhir
+			          
+					  </a>          
+			            
+			</font></td>
+			</tr>
+		  </table>      
+	     	
+	</td>
+  </tr>
+</table>
+		<div align="center">
+			<a style="color: #FF0000;"><i>Penafian Tuntutan  </a>: Sebarang Maklumat Mengenai Perolehan Secara Rundingan Terus Hendaklah Dirujuk Terus ke Kementerian/Agensi Yang Berkenaan.</i>
+		</div>
+</body>
+</html>
+<!--
+Module: Iklan & Keputusan Tender with RSS Feeder
+Author: Mohd Saffuan bin Suntong
+Position: Penolong Setiausaha (Operasi)
+Dept: Bahagian Pengurusan Teknologi Maklumat
+Section: Infrastruktur, Keselamatan dan Logistik
+-->
