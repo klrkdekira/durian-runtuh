@@ -18,12 +18,12 @@ import (
 
 type (
 	Tender struct {
-		Title    string  `json:"title"`
-		Category string  `json:"category"`
-		Ministry string  `json:"ministry"`
-		Company  string  `json:"company"`
-		Value    float64 `json:"value"`
-		Reason   string  `json:"reason"`
+		Title    string `json:"title"`
+		Category string `json:"category"`
+		Ministry string `json:"ministry"`
+		Company  string `json:"company"`
+		Value    int64  `json:"value"`
+		Reason   string `json:"reason"`
 	}
 )
 
@@ -140,7 +140,9 @@ func extractData(docNum int) ([]*Tender, error) {
 			case 3:
 				tender.Company = content.Text()
 			case 4:
-				val, err := strconv.ParseFloat(strings.Replace(content.Text(), ",", "", -1), 64)
+				stringVal := strings.Replace(content.Text(), ",", "", -1)
+				// forgive my cheap hack
+				val, err := strconv.ParseInt(strings.Split(stringVal, ".")[0], 10, 64)
 				if err != nil {
 					log.Println(err)
 				}
