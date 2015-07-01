@@ -14,16 +14,17 @@ import (
 	"sync"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/gocarina/gocsv"
 )
 
 type (
 	Tender struct {
-		Title    string `json:"title"`
-		Category string `json:"category"`
-		Ministry string `json:"ministry"`
-		Company  string `json:"company"`
-		Value    int64  `json:"value"`
-		Reason   string `json:"reason"`
+		Title    string `json:"title" csv:"title"`
+		Category string `json:"category" csv:"category"`
+		Ministry string `json:"ministry" csv:"ministry"`
+		Company  string `json:"company" csv:"company"`
+		Value    int64  `json:"value" csv:"value"`
+		Reason   string `json:"reason" csv:"reason"`
 	}
 )
 
@@ -109,6 +110,16 @@ func processDocument(doc chan int, processState chan struct{}) {
 	if err := ioutil.WriteFile("results.json", dump, 0644); err != nil {
 		fmt.Println(err)
 	}
+
+	csvDump, err := gocsv.MarshalBytes(tenders)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	if err := ioutil.WriteFile("results.csv", csvDump, 0644); err != nil {
+		fmt.Println(err)
+	}
+
 	processState <- struct{}{}
 }
 
